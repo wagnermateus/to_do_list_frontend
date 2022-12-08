@@ -1,0 +1,31 @@
+.Header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px double #beefe5;
+  padding: 1.5rem;
+}
+.Header h1 {
+  margin-bottom: 3rem;
+}
+.Header_Content {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+}
+.Header button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.Header svg {
+  transform: scale(1.2);
+}

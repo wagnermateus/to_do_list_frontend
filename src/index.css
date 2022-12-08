@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+  color: #020105;
+}
+button {
+  background: #f7c531;
+  border: 1px solid #beefe5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover {
+  background: #f0a030;
+}
+input[type="text"],
+input[type="datetime-local"],
+select {
+  border: none;
+  border-bottom: 1px solid #f7c531;
+  height: 28px;
+  width: 100%;
+  background: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #f0a030;
+}

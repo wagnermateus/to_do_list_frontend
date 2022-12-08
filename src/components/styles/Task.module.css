@@ -1,0 +1,12 @@
+.Task {
+  width: 100%;
+  background: rgb(255, 255, 240);
+  border: 1px dashed #f7c531;
+  border-radius: 5%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.Task_Info {
+  display: flex;
+  justify-content: space-between;
+}
