@@ -8,5 +8,23 @@
 }
 .Task_Info {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.Task:hover {
+  background: #f7c531;
+}
+.Status {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+.Task_Name_Container {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5rem;
 }

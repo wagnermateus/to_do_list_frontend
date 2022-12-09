@@ -3,6 +3,8 @@ import styles from "./styles/Task.module.css";
 import { BsCalendarDate } from "react-icons/bs";
 import { FaPlaceOfWorship } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
+import { MdOutlineDoneOutline } from "react-icons/md";
+import { GiSandsOfTime } from "react-icons/gi";
 interface TasksProps {
   id?: string;
   name: string;
@@ -15,28 +17,24 @@ export function Task(props: TasksProps) {
   return (
     <div className={styles.Task}>
       <div className={styles.Task_Info}>
-        <p>{props.name}</p>
-        <p>{props.status === "to do" ? "Por fazer" : "Concluído"}</p>
-      </div>
-      <div className={styles.More_Info}>
-        <div>
-          <span>
-            <BsCalendarDate />:
-          </span>
-          <p>{props.date}</p>
-        </div>
-        <div>
-          <span>
-            <FaPlaceOfWorship />:
-          </span>
-          <p>{props.place}</p>
+        <div className={styles.Task_Name_Container}>
+          {props.status === "to do" ? (
+            <p>{props.name}</p>
+          ) : (
+            <p>
+              <s>{props.name}</s>
+            </p>
+          )}
         </div>
 
-        <div>
-          <span>
-            <GrNotes />:
-          </span>
-          <p>{props.notes}</p>
+        <div className={styles.Status}>
+          <p>
+            {props.status === "to do" ? (
+              <GiSandsOfTime />
+            ) : (
+              <MdOutlineDoneOutline />
+            )}
+          </p>
         </div>
       </div>
     </div>

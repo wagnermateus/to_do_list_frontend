@@ -22,6 +22,7 @@ export function Tasks() {
   }, []);
   return (
     <div className={style.Tasks}>
+      <h2>Tarefas:</h2>
       {tasks.map((task) => (
         <div key={task.id}>
           <Task
