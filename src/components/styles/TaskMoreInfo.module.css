@@ -1,0 +1,32 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 1px dashed #f7c531;
+  border-right: 1px dashed #f7c531;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.Content svg {
+  transform: scale(1.5);
+}
+.Content p:first-letter {
+  text-transform: uppercase;
+}
+.Controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 3rem;
+}
+button {
+  width: 100%;
+}
+.Content input[type="checkbox"] {
+  width: 100%;
+}

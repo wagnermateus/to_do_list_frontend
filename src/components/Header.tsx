@@ -1,12 +1,15 @@
 import styles from "./styles/Header.module.css";
 import { BiMessageSquareAdd } from "react-icons/bi";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import MyContext from "../context/MyContext";
 interface HeaderProps {
   handleNewTaskRender: (status: boolean) => void;
 }
 export function Header(props: HeaderProps) {
   const [newTaskComponentIsRender, setNewTaskComponentIsRender] =
     useState(true);
+
+  const { searchTasks, setSearchTasks }: any = useContext(MyContext);
 
   function handleNewTaskRender() {
     if (!newTaskComponentIsRender) {
@@ -18,6 +21,7 @@ export function Header(props: HeaderProps) {
   return (
     <div className={styles.Header}>
       <h1>Lista De Afazeres</h1>
+
       <div className={styles.Header_Content}>
         <button onClick={handleNewTaskRender}>
           <BiMessageSquareAdd />
@@ -29,6 +33,7 @@ export function Header(props: HeaderProps) {
             id="search"
             name="search"
             placeholder="Pesquisar..."
+            onChange={(e) => setSearchTasks(e.target.value)}
           />
         </div>
         <div className={styles.Inputs}>
